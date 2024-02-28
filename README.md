@@ -6,7 +6,7 @@ The project can be hosted using WAMP locally. The following MySQL script must be
 CREATE DATABASE url_shorterner;
 
 CREATE TABLE urls (
-    id int(11) UNSIGNED PRIMARY KEY NOT NULL,
+    id int(11) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
     long_url varchar(2000) NOT NULL,
     short_url varchar(255) NOT NULL
 );

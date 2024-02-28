@@ -11,6 +11,7 @@ function buildURLShorterningForm() {
                 <input type="text" id="lurl" name="lurl"><br>
                 <label for="surl">Short URL:</label><br>
                 <input type="text" id="surl" name="surl">
+                <input type="submit" value="Submit">
             </form>';
 }
 
