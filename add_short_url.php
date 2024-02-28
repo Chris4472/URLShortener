@@ -1,14 +1,8 @@
 <?php
-require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/connection.php';
 
-$longURL  = $_POST["lurl"];
-$shortURL = $_POST["surl"];
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+$longURL  = $_GET["lurl"];
+$shortURL = $_GET["surl"];
 
 $sql = "INSERT INTO urls (long_url, short_url)
 VALUES ('$longURL', '$shortURL')";
@@ -21,5 +15,5 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-header('Location: index.php');
+header('Location: home.php');
 ?>

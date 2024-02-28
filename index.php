@@ -1,18 +1,17 @@
 <?php
-require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/connection.php';
 
-echo 'Shortern a URL here! </br></br>';
+$short_url = $_GET['s'];
 
-echo buildURLShorterningForm();
+$sql = "SELECT long_url FROM urls WHERE short_url='$short_url'";
 
-function buildURLShorterningForm() {
-    return '<form action="/add_short_url.php">
-                <label for="lurl">Long URL:</label><br>
-                <input type="text" id="lurl" name="lurl"><br>
-                <label for="surl">Short URL:</label><br>
-                <input type="text" id="surl" name="surl">
-                <input type="submit" value="Submit">
-            </form>';
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        header('Location: '.$row['long_url']);
+    }
 }
 
+$conn->close();
 ?>
