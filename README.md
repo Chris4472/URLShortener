@@ -1,7 +1,7 @@
 # URLShortener
  Small project to create a URL shortener
 
-The project can be hosted using WAMP locally. The following MySQL script must be run to create the database and table.
+The project can be hosted using WAMP locally. The following MySQL script must be run to create the database and table, this can be done using MySQL Workbench.
 
 CREATE DATABASE url_shorterner;
 

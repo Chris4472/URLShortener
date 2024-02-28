@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/connection.php';
 
-$longURL  = $_GET["lurl"];
-$shortURL = $_GET["surl"];
+$longURL  = (string) $_GET["lurl"];
+$shortURL = (string) $_GET["surl"];
 
 $sql = "INSERT INTO urls (long_url, short_url)
 VALUES ('$longURL', '$shortURL')";
