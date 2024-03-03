@@ -9,7 +9,8 @@ function buildNavigationBar(): string {
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="admin.php">Admin</a></li>
-            </ul></br></br>';
+            </ul>
+            </br></br>';
 }
 
 ?>

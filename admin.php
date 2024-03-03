@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo '<table><tr><th>Long URL</th><th>Short URL</th></tr>';
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["long_url"]. "</td><td>" . $row["short_url"] . "</td></tr><br>";
+        echo "<tr><td><a>" . $row["long_url"]. "</a></td><td><a href='". $row["long_url"]."'>" . $row["short_url"] . "</a></td></tr><br>";
     }
     echo '</table>';
 }
