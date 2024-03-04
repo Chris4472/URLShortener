@@ -1,7 +1,7 @@
 <?php
 class Url {
-    public string $shortUrl;
-    public string $longUrl;
+    private string $shortUrl;
+    private string $longUrl;
 
     function __construct($shortUrl, $longUrl) {
         $this->shortUrl = $shortUrl;
